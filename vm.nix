@@ -10,14 +10,14 @@ in
     kernelPackages = pkgs.linuxPackagesFor base_linux_version;
 
     # https://nixos.wiki/wiki/Linux_kernel#Custom_kernel_commandline
-    # kernelParams = kernel_custom_params;
+    kernelParams = kernel_custom_params;
 
     # https://nixos.wiki/wiki/Linux_kernel#Custom_configuration
-    # kernelPatches = [ {
-    #   name = "custom-config";
-    #   patch = null;
-    #   extraConfig = kernel_custom_config;
-    # } ];
+    kernelPatches = [ {
+      name = "custom-config";
+      patch = null;
+      extraConfig = kernel_custom_config;
+    } ];
 
     # extraModulePackages = [ custom_kernel_module ];
   };
